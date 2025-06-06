@@ -4,26 +4,29 @@ import { MediaBarMotion } from '../common/motion/MediaBar';
 import {
   IconBrandCampaignmonitor,
   IconBrandGithub,
-  IconBrandInstagram,
+  IconBrandX,
   IconBrandLinkedin,
   IconBrandWhatsapp,
-} from '@tabler/icons-react';
+} from "@tabler/icons-react";
 
 export const MediaBar = () => {
   const media = [
-    { icon: <IconBrandGithub />, link: 'https://github.com/Bayusetiawan45' },
+    {
+      icon: <IconBrandGithub />,
+      link: "https://github.com/Dami-Stack",
+    },
     {
       icon: <IconBrandLinkedin />,
-      link: 'https://www.linkedin.com/in/bayu-setiawan99/',
+      link: "https://www.linkedin.com/in/damilola-akinrodoye/",
     },
     {
-      icon: <IconBrandInstagram />,
-      link: 'https://www.instagram.com/bayustr__/',
+      icon: <IconBrandX />,
+      link: "https://x.com/StackDami",
     },
-    { icon: <IconBrandWhatsapp />, link: 'https://wa.me/+62887676546' },
+    { icon: <IconBrandWhatsapp />, link: "https://wa.me/2347087019089" },
     {
       icon: <IconBrandCampaignmonitor />,
-      link: 'mailto:bayusetiawanipb@gmail.com',
+      link: "mailto:damiactuary@gmail.com",
     },
   ];
   const { container } = MediaBarMotion;
@@ -32,7 +35,7 @@ export const MediaBar = () => {
       initial={container.initial}
       animate={container.animated}
       transition={container.transition}
-      className="hidden md:flex absolute z-10 flex-col w-10 p-2 bg-teal-500 items-center rounded-md bottom-0 md:bottom-auto md:top-80 space-y-4"
+      className="hidden md:flex absolute z-10 flex-col w-10 p-2 bg-teal-500 items-center rounded-md bottom-0 md:bottom-auto md:top-80 space-y-4 border border-white"
     >
       {media.map((item) => (
         <Link
@@ -40,6 +43,8 @@ export const MediaBar = () => {
           key={item.link}
           className="text-black hover:text-white"
           aria-label={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {item.icon}
         </Link>
